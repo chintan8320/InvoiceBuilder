@@ -54,7 +54,7 @@ export async function generatePdfService(req: NextRequest) {
             const puppeteer = await import("puppeteer");
             browser = await puppeteer.launch({
                 args: ["--no-sandbox", "--disable-setuid-sandbox"],
-                headless: "new",
+                headless: true,
             });
         }
 
